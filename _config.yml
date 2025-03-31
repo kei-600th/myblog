@@ -4,22 +4,22 @@ author: nakata
 theme: minima
 
 # GitHub Pages settings
-url: "https://nakata.github.io"
+url: "https://kei-600th.github.io"
 baseurl: "/myblog"
 
 # Build settings
 markdown: kramdown
+highlighter: rouge
 kramdown:
+  input: GFM
   syntax_highlighter: rouge
   syntax_highlighter_opts:
-    default_lang: plaintext
     css_class: 'highlight'
     span:
       line_numbers: false
     block:
       line_numbers: false
       start_line: 1
-    wrap: false
 
 plugins:
   - jekyll-feed
