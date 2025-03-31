@@ -1,0 +1,30 @@
+title: MyBlog
+description: プログラミングの学習記録
+author: nakata
+theme: minima
+
+# GitHub Pages settings
+url: "https://nakata.github.io"
+baseurl: "/myblog"
+
+# Build settings
+markdown: kramdown
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+
+# Exclude files from processing
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
+
+# Collections
+collections:
+  posts:
+    output: true
+    permalink: /posts/:year/:month/:day/:title/
