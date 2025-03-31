@@ -1,5 +1,7 @@
 # Myblog
 
+- url: https://kei-600th.github.io/myblog/
+
 ## What is this?
 
 - 自分のプログラミングなどの学習をブログとしてアウトプットしていきます
