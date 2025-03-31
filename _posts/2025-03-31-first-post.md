@@ -10,6 +10,7 @@ categories: blog
 ## プログラミング例
 
 ### Python
+
 ```python
 def greet(name):
     """シンプルな挨拶関数"""
@@ -20,10 +21,11 @@ print(greet("World"))
 ```
 
 ### JavaScript
+
 ```javascript
 // ES6のアロー関数を使用
 const greet = (name) => {
-  return `Hello, ${name}!`;
+    return `Hello, ${name}!`;
 };
 
 // 関数を呼び出す
@@ -31,9 +33,10 @@ console.log(greet('World'));
 ```
 
 ### Ruby
+
 ```ruby
 def greet(name)
-  "Hello, #{name}!"
+    "Hello, #{name}!"
 end
 
 # 関数を呼び出す
