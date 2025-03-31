@@ -5,6 +5,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{% if page.title %}{{ page.title }} - {% endif %}{{ site.title }}</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      /* コードブロックのカスタムスタイル */
+      .highlight {
+        background: #f8fafc;
+        padding: 1.25em;
+        border-radius: 0.75rem;
+        border: 1px solid #e2e8f0;
+        margin: 1.5em 0;
+        overflow-x: auto;
+        box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
+      }
+      .highlight pre {
+        margin: 0;
+        font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+        font-size: 0.95em;
+        line-height: 1.5;
+      }
+      /* シンタックスハイライトの色設定 */
+      .highlight .k, .highlight .kd { color: #8b5cf6; } /* キーワード */
+      .highlight .s, .highlight .s1, .highlight .s2 { color: #059669; } /* 文字列 */
+      .highlight .c, .highlight .c1 { color: #64748b; font-style: italic; } /* コメント */
+      .highlight .nb { color: #0ea5e9; } /* 組み込み関数 */
+      .highlight .nf { color: #3b82f6; font-weight: 600; } /* 関数名 */
+      .highlight .p { color: #475569; } /* 括弧など */
+      .highlight .o { color: #475569; } /* 演算子 */
+      .highlight .mi { color: #f59e0b; } /* 数値 */
+      .highlight .nn { color: #6366f1; } /* 名前空間 */
+    </style>
     <script>
       tailwind.config = {
         theme: {
