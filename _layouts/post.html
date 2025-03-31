@@ -1,0 +1,37 @@
+---
+layout: default
+---
+
+<article class="prose prose-lg max-w-none">
+  <header class="mb-8">
+    <h1 class="text-3xl font-bold text-gray-900 mb-2">{{ page.title }}</h1>
+    <div class="flex items-center space-x-4 text-sm text-gray-500">
+      <time datetime="{{ page.date | date_to_xmlschema }}">
+        {{ page.date | date: "%Y年%m月%d日" }}
+      </time>
+      {% if page.categories %}
+        <span>|</span>
+        <span>{{ page.categories | join: ", " }}</span>
+      {% endif %}
+    </div>
+  </header>
+
+  <div class="text-gray-700 prose-headings:text-gray-900 prose-a:text-blue-600 prose-a:no-underline hover:prose-a:underline">
+    {{ content }}
+  </div>
+
+  <footer class="mt-8 pt-8 border-t border-gray-200">
+    <nav class="flex justify-between text-sm">
+      {% if page.previous.url %}
+        <a href="{{ page.previous.url | relative_url }}" class="text-blue-600 hover:text-blue-800">
+          ← {{ page.previous.title }}
+        </a>
+      {% endif %}
+      {% if page.next.url %}
+        <a href="{{ page.next.url | relative_url }}" class="text-blue-600 hover:text-blue-800">
+          {{ page.next.title }} →
+        </a>
+      {% endif %}
+    </nav>
+  </footer>
+</article>

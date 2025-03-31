@@ -4,23 +4,90 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{% if page.title %}{{ page.title }} - {% endif %}{{ site.title }}</title>
-    <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            typography: {
+              DEFAULT: {
+                css: {
+                  maxWidth: 'none',
+                  color: '#374151',
+                  h1: {
+                    color: '#111827',
+                  },
+                  h2: {
+                    color: '#111827',
+                  },
+                  h3: {
+                    color: '#111827',
+                  },
+                  strong: {
+                    color: '#111827',
+                  },
+                  a: {
+                    color: '#2563eb',
+                    '&:hover': {
+                      color: '#1d4ed8',
+                    },
+                  },
+                  code: {
+                    color: '#111827',
+                  },
+                  'code::before': {
+                    content: '""',
+                  },
+                  'code::after': {
+                    content: '""',
+                  },
+                }
+              }
+            }
+          }
+        },
+        plugins: [
+          function({addComponents}) {
+            addComponents({
+              '.prose': {
+                '& h1': { fontSize: '2.25rem', fontWeight: '700', marginBottom: '1rem' },
+                '& h2': { fontSize: '1.875rem', fontWeight: '600', marginTop: '2rem', marginBottom: '1rem' },
+                '& h3': { fontSize: '1.5rem', fontWeight: '600', marginTop: '1.5rem', marginBottom: '0.75rem' },
+                '& p': { marginBottom: '1rem' },
+                '& ul': { listStyleType: 'disc', paddingLeft: '1.5rem', marginBottom: '1rem' },
+                '& ol': { listStyleType: 'decimal', paddingLeft: '1.5rem', marginBottom: '1rem' },
+                '& li': { marginBottom: '0.5rem' },
+                '& a': { color: '#2563eb', textDecoration: 'underline' },
+                '& a:hover': { color: '#1d4ed8' },
+                '& code': { backgroundColor: '#f3f4f6', padding: '0.2rem 0.4rem', borderRadius: '0.25rem' },
+                '& pre': { backgroundColor: '#f3f4f6', padding: '1rem', borderRadius: '0.5rem', overflow: 'auto', marginBottom: '1rem' },
+                '& blockquote': { borderLeftWidth: '4px', borderLeftColor: '#e5e7eb', paddingLeft: '1rem', fontStyle: 'italic', marginBottom: '1rem' },
+              }
+            })
+          }
+        ]
+      }
+    </script>
 </head>
-<body>
-    <header>
-        <div class="container">
-            <h1><a href="{{ '/' | relative_url }}">{{ site.title }}</a></h1>
-            <p>{{ site.description }}</p>
+<body class="bg-gray-50">
+    <header class="bg-white shadow-sm">
+        <div class="max-w-4xl mx-auto px-4 py-6">
+            <h1 class="text-3xl font-bold">
+                <a href="{{ '/' | relative_url }}" class="text-gray-900 hover:text-gray-700">{{ site.title }}</a>
+            </h1>
+            <p class="mt-2 text-gray-600">{{ site.description }}</p>
         </div>
     </header>
 
-    <main class="container">
-        {{ content }}
+    <main class="max-w-4xl mx-auto px-4 py-8">
+        <div class="bg-white shadow sm:rounded-lg p-6">
+            {{ content }}
+        </div>
     </main>
 
-    <footer>
-        <div class="container">
-            <p>&copy; {{ site.time | date: '%Y' }} {{ site.author }}. All rights reserved.</p>
+    <footer class="bg-white border-t">
+        <div class="max-w-4xl mx-auto px-4 py-6">
+            <p class="text-center text-gray-600">&copy; {{ site.time | date: '%Y' }} {{ site.author }}. All rights reserved.</p>
         </div>
     </footer>
 </body>

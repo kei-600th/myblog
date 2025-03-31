@@ -1,11 +1,9 @@
 ---
-layout: default
+layout: post
 title: "最初のブログ投稿"
 date: 2025-03-31
 categories: blog
 ---
-
-# 最初のブログ投稿
 
 これは私の最初のブログ投稿です。このブログでは、プログラミングの学習記録を共有していきます。
 
