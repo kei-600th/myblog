@@ -25,6 +25,10 @@ plugins:
   - jekyll-feed
   - jekyll-seo-tag
 
+# Include assets directory
+include:
+  - assets
+
 # Exclude files from processing
 exclude:
   - Gemfile
@@ -34,6 +38,7 @@ exclude:
   - vendor/cache/
   - vendor/gems/
   - vendor/ruby/
+  - README.md
 
 # Collections
 collections:

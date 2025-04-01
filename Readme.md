@@ -10,6 +10,12 @@
 
 ## command
 
+- 記事を作成する場合
+
+```bash
+ruby create_post.rb title
+```
+
 - ローカルで確認する場合
 
 ```bash
