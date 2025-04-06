@@ -1,15 +1,17 @@
 ---
 layout: post
-title: "cloudflare ハンズオン"
+title: "cloudflareworkers ハンズオン"
 date: 2025-04-03
 categories: blog
 ---
 
-この記事ではcloudflareで簡単なfaasの作り方をハンズオン形式で紹介します
+この記事ではcloudflareworkersで簡単なfaasの作り方をハンズオン形式で紹介します
 
-## CloudFlareとは？
+## faasとは？
 
-- cloudflareの解説をここに記載
+faasとは、function as a serviceの略で、関数をサービスとして提供するものです。
+
+
 
 ## 今回作成するアプリの構成
 
