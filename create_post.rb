@@ -22,6 +22,7 @@ layout: post
 title: "#{title.split('-').map(&:capitalize).join(' ')}"
 date: #{today.strftime('%Y-%m-%d')}
 categories: blog
+published: false
 ---
 CONTENT
   
